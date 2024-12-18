@@ -1,0 +1,337 @@
+:root{
+    --cardinal:#be1d2c;
+    --matisse:#15669e;
+    --red-color: #ff0000;
+    --yellow-color: #ffff00;
+    --background-color: #f8f9fa; /* لون الخلفية */
+    --text-color: #343a40; /* لون النص */
+    --link-color: #007bff; /* لون الروابط */
+    --button-color: #28a745; /* لون الأزرار */
+    --heading-color: #dc3545; /* لون العناوين */
+    --border-color: #ced4da; /* لون الحدود */
+    --card-background: #ffffff; /* لون خلفية البطاقات */
+    --secondary-text-color: #6c757d; /* لون النص الثانوي */
+}
+*{
+    direction: rtl;
+    text-decoration: none;
+    list-style: none;
+    
+    
+   
+}
+
+body{
+    font-family: "Cairo", serif;
+    background-color: #e2d8d800;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: "Cairo", serif;
+}
+
+/* navbar_start */
+navbar {
+   
+    padding: 1rem;
+
+    background-color: var(--background-color);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+   
+}
+
+.container{
+    max-width: 1200px;
+    margin: auto;
+    
+}
+.navbar .navbar-nav .nav-link{
+    color: var(--matisse);
+    transition: color 0.3s ease-in;
+    
+}
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:focus,
+.navbar .navbar-nav .nav-link:hover{
+    color: var(--cardinal);
+}
+.navbar .navbar-toggler{
+    color: var(--matisse);
+    font-size: 25px;
+    border-color: var(--cardinal);
+    border-width: 2px;
+}
+.navbar .navbar-toggler:focus{
+    box-shadow: none;
+}
+.navbar .navbar-toggler[aria-expanded="true"]{
+    color: var(--matisse);
+}
+.container ul  {
+    font-family: "cairo", serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: auto;
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+}
+
+.navbar {
+    position: fixed; /* لجعل الناف بار ثابت */
+    top: 0; /* لتثبيته في أعلى الصفحة */
+    width: 100%; /* ليغطي عرض الصفحة بالكامل */
+   
+   
+    transition: top 0.3s ease, background 0.3s ease; /* حركة سلسة */
+    /* z-index: 1000; لضمان ظهور الناف بار فوق المحتوى */
+    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.2); /* إضافة ظل */
+}
+.navbar {
+    position: fixed; /* لجعل الناف بار ثابت */
+    top: 0; /* لتثبيته في أعلى الصفحة */
+    width: 100%; /* ليغطي عرض الصفحة بالكامل */
+    background: rgba(214, 222, 228, 0.5); /* خلفية شفافة */
+    backdrop-filter: blur(10px); /* تأثير البلور */
+    transition: top 0.3s ease, background 0.3s ease; /* حركة سلسة */
+    z-index: 1000; /* لضمان ظهور الناف بار فوق المحتوى */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* إضافة ظل */
+}
+/* navbar_start */
+
+/*home_start */
+.landing {
+    display: flex;
+    align-items: center;
+    padding-top: 220px;
+    color: white; /* لون النص */
+    display: flex;
+   margin: auto;
+    text-align: center;
+   
+    
+}
+.main-title h2{
+    font-size: 1.7rem;
+    font-weight: 800;
+    color: var(--matisse);
+}
+.main-title::after{
+    content: '';
+    width: 200px;
+    height: 3px;
+    background-color: var(--matisse);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    
+}
+/* home_end */
+
+/* products_start */
+.row{
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.main-title h2 {
+    color: var(--matisse);
+}
+
+.mySwiper{
+   position: relative;
+    background-color: var(--background-color);
+    overflow: hidden;
+
+}
+.product{
+    
+    position: relative;
+    background-color: rgba(214, 222, 228, 0.5);
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 5px 5px 5px  #85424228;
+   margin-top: 50px;
+    padding: 5px 5px;
+    
+
+   
+}
+.product .img-product{
+    position: relative ;
+}
+.product .img-product img{
+    width: 80%;
+    transition: 0.3s ease-in-out;
+}
+.product:hover .img-product img{
+    scale: 1.1;
+    cursor: pointer;
+}
+.product h3{
+    cursor: pointer;
+    color: var(--matisse);
+}
+
+
+
+
+
+/* products_end */
+
+
+/* partner-companies */
+
+.partner-companies {
+    background-color: #f8f9fa; /* لون خلفية القسم */
+ 
+}
+
+.main-title h2 {
+    color: var(--matisse);
+    animation-name: square;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-iteration-count: 5;
+}
+.partner-companies .main-title::after{
+    content: '';
+    width: 300px;
+    height: 3px;
+    background-color: var(--matisse);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    
+}
+
+.partner-card {
+    background-color: #ffffff; /* لون خلفية البطاقة */
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.partner-card:hover {
+    transform: translateY(-5px); /* تأثير التحويم */
+}
+
+.partner-logo {
+    width: 100%; /* عرض الشعار */
+    height: auto; /* الحفاظ على نسبة العرض إلى الارتفاع */
+    border-radius: 8px; /* زوايا دائرية للشعار */
+}
+
+.partner-name {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* partner-companies-end */
+
+/* testimonials-start */
+.testimonials {
+    background-color: #f8f9fa; /* لون خلفية القسم */
+}
+
+.main-title h2 {
+    color: var(--matisse);
+    text-shadow: 2px 3px #ff000034;
+   
+}
+
+.testimonial-card {
+    background-color: #ffffff; /* لون خلفية البطاقة */
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px); /* تأثير التحويم */
+}
+
+.testimonial-text {
+    font-style: italic;
+    color: var(--text-color);
+}
+
+.customer-name {
+    margin-top: 15px;
+    font-weight: bold;
+    color: var(--link-color);
+}
+/* testimonials-end */
+
+/* footer-start */
+.footer {
+    background-color: var(--background-color);
+    padding: 20px 0;
+    color: var(--text-color);
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer .social-links {
+    margin-bottom: 10px;
+}
+
+.footer .social-icon {
+    color: var(--link-color);
+    font-size: 24px;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+
+.footer .social-icon:hover {
+    color: var(--heading-color);
+}
+
+.footer-text {
+    font-size: 14px;
+    color: var(--secondary-text-color);
+}
+/* footer-end */
+
+
+.prim-logo{
+    
+    animation-name: square;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-iteration-count: 5;
+}
+/* @keyframes square {
+    from{
+        opacity: 0;
+        scale: 0.8;
+
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+    
+} */
+body {
+    transform: scale(0.8); /* تصغير المحتوى بنسبة 80% */
+    transform-origin: top right; /* تحديد نقطة الأصل للتصغير */
+    width: 125%;
+    height: 250px;
+}
+
+
+
+
+
