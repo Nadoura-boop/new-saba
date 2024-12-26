@@ -30,9 +30,9 @@ body{
 }
 
 /* navbar_start */
-navbar {
+.navbar {
    
-    padding: 1rem;
+    padding: .5rem;
 
     background-color: var(--background-color);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -53,6 +53,7 @@ navbar {
 .navbar .navbar-nav .nav-link:focus,
 .navbar .navbar-nav .nav-link:hover{
     color: var(--cardinal);
+   
 }
 .navbar .navbar-toggler{
     color: var(--matisse);
@@ -96,28 +97,27 @@ navbar {
     z-index: 1000; /* لضمان ظهور الناف بار فوق المحتوى */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* إضافة ظل */
 }
-/* navbar_start */
-
 /*home_start */
 .landing {
     display: flex;
     align-items: center;
-    padding-top: 220px;
+    padding-top: 200px;
     color: white; /* لون النص */
     display: flex;
+    justify-content: center;
    margin: auto;
-    text-align: center;
+  
    
     
 }
 .main-title h2{
-    font-size: 1.7rem;
+    font-size: 1.8rem;
     font-weight: 800;
     color: var(--matisse);
 }
 .main-title::after{
     content: '';
-    width: 200px;
+    width: 300px;
     height: 3px;
     background-color: var(--matisse);
     position: absolute;
@@ -140,6 +140,10 @@ navbar {
 .main-title h2 {
     color: var(--matisse);
 }
+.featured-products .container{
+    transform: scale(0.8); 
+
+}
 
 .mySwiper{
    position: relative;
@@ -157,14 +161,14 @@ navbar {
    margin-top: 50px;
     padding: 5px 5px;
     
-
-   
 }
 .product .img-product{
     position: relative ;
+    
+   
 }
 .product .img-product img{
-    width: 80%;
+    width: 70%;
     transition: 0.3s ease-in-out;
 }
 .product:hover .img-product img{
@@ -186,8 +190,9 @@ navbar {
 /* partner-companies */
 
 .partner-companies {
+    margin-top: -20px;
     background-color: #f8f9fa; /* لون خلفية القسم */
- 
+     transform: scale(0.8); /* تم تعديل القيمة هنا لتصغير المنتجات بنسبة 20% */
 }
 
 .main-title h2 {
@@ -238,13 +243,13 @@ navbar {
 
 /* testimonials-start */
 .testimonials {
+    transform: scale(0.8); /* تم تعديل القيمة هنا لتصغير المنتجات بنسبة 20% */
+     margin-top: -60px;
     background-color: #f8f9fa; /* لون خلفية القسم */
 }
 
 .main-title h2 {
-    color: var(--matisse);
-    text-shadow: 2px 3px #ff000034;
-   
+    color: var(--matisse); 
 }
 
 .testimonial-card {
@@ -274,7 +279,10 @@ navbar {
 /* testimonials-end */
 
 /* footer-start */
+
 .footer {
+    transform: scale(0.8); /* تم تعديل القيمة هنا لتصغير المنتجات بنسبة 20% */
+
     background-color: var(--background-color);
     padding: 20px 0;
     color: var(--text-color);
@@ -324,14 +332,34 @@ navbar {
     }
     
 } */
-body {
-    transform: scale(0.8); /* تصغير المحتوى بنسبة 80% */
-    transform-origin: top right; /* تحديد نقطة الأصل للتصغير */
-    width: 125%;
-    height: 250px;
+
+
+@media  (max-width: 768px) {
+    .featured-products .container{
+
+        transform: scale(1.5); /* تم تعديل القيمة هنا لتصغير المنتجات بنسبة 20% */
+
+
+    }
+    .product {
+        aspect-ratio: 1; /* اجعل نسبة العرض إلى الارتفاع 1:1 (مربع) */
+        padding: 10px; /* زيادة الحشو داخل المنتج */
+        margin: 10px 0; /* تقليل المسافة بين المنتجات */
+    }
+    .products h3{
+        text-align: center;
+        font-size: 15px;
+        white-space: nowrap; 
+        text-overflow: ellipsis; 
+    }
+    .sale-sec .main-title h2{
+        transform: scale(.6);
+        
+    }
+    .sale-sec .main-title::after{
+      height: 1.8px;
+      width: 100px;
+     
+    }
+    
 }
-
-
-
-
-
