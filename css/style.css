@@ -172,7 +172,7 @@ body{
     transition: 0.3s ease-in-out;
 }
 .product:hover .img-product img{
-    scale: 1.1;
+    scale: 1.1 ;
     cursor: pointer;
 }
 .product h3{
@@ -336,15 +336,11 @@ body{
 
 @media  (max-width: 768px) {
     .featured-products .container{
-
-        transform: scale(1.5); /* تم تعديل القيمة هنا لتصغير المنتجات بنسبة 20% */
-
-
+      scale: 1.1;
     }
     .product {
-        aspect-ratio: 1; /* اجعل نسبة العرض إلى الارتفاع 1:1 (مربع) */
         padding: 10px; /* زيادة الحشو داخل المنتج */
-        margin: 10px 0; /* تقليل المسافة بين المنتجات */
+        margin: 10px 0px; /* تقليل المسافة بين المنتجات */
     }
     .products h3{
         text-align: center;
