@@ -1,216 +1,365 @@
-<!DOCTYPE html>
-<html lang="ar">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+:root{
+    --cardinal:#be1d2c;
+    --matisse:#15669e;
+    --red-color: #ff0000;
+    --yellow-color: #ffff00;
+    --background-color: #f8f9fa; /* لون الخلفية */
+    --text-color: #343a40; /* لون النص */
+    --link-color: #007bff; /* لون الروابط */
+    --button-color: #28a745; /* لون الأزرار */
+    --heading-color: #dc3545; /* لون العناوين */
+    --border-color: #ced4da; /* لون الحدود */
+    --card-background: #ffffff; /* لون خلفية البطاقات */
+    --secondary-text-color: #6c757d; /* لون النص الثانوي */
+}
+*{
+    direction: rtl;
+    text-decoration: none;
+    list-style: none;
+    
+    
+   
+}
 
-    <title>sabah</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
-</head>
-<body>
-   <!-- nabar_start -->
-    <nav class="navbar navbar-expand-lg">
-        <div class="container">
-            <img class="prim-logo" src="img/لوجو (1).png" alt="" srcset="">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link p-2 p-lg-3 active" aria-current="page" href="#الرئيسية">الرئيسية</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link p-2 p-lg-3" href="#منتجاتنا">منتجاتنا</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link p-2 p-lg-3" href="#من نحن">من نحن</a>
-                    </li> 
-                    <li class="nav-item">
-                        <a class="nav-link p-2 p-lg-3" href="#اراءالعملاء"> آراءالعملاء</a>
-                    </li> 
-                    
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <!-- navbar-end -->
+body{
+    font-family: "Cairo", serif;
+    background-color: #e2d8d800;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: "Cairo", serif;
+}
+
+/* navbar_start */
+.navbar {
+   
+    padding: .5rem;
+
+    background-color: var(--background-color);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+   
+}
+
+.container{
+    max-width: 1200px;
+    margin: auto;
+    
+}
+.navbar .navbar-nav .nav-link{
+    color: var(--matisse);
+    transition: color 0.3s ease-in;
+    
+}
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:focus,
+.navbar .navbar-nav .nav-link:hover{
+    color: var(--cardinal);
+   
+}
+.navbar .navbar-toggler{
+    color: var(--matisse);
+    font-size: 25px;
+    border-color: var(--cardinal);
+    border-width: 2px;
+}
+.navbar .navbar-toggler:focus{
+    box-shadow: none;
+}
+.navbar .navbar-toggler[aria-expanded="true"]{
+    color: var(--matisse);
+}
+.container ul  {
+    font-family: "cairo", serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: auto;
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+}
+
+.navbar {
+    position: fixed; /* لجعل الناف بار ثابت */
+    top: 0; /* لتثبيته في أعلى الصفحة */
+    width: 100%; /* ليغطي عرض الصفحة بالكامل */
+   
+   
+    transition: top 0.3s ease, background 0.3s ease; /* حركة سلسة */
+    /* z-index: 1000; لضمان ظهور الناف بار فوق المحتوى */
+    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.2); /* إضافة ظل */
+}
+.navbar {
+    position: fixed; /* لجعل الناف بار ثابت */
+    top: 0; /* لتثبيته في أعلى الصفحة */
+    width: 100%; /* ليغطي عرض الصفحة بالكامل */
+    background: rgba(214, 222, 228, 0.5); /* خلفية شفافة */
+    backdrop-filter: blur(10px); /* تأثير البلور */
+    transition: top 0.3s ease, background 0.3s ease; /* حركة سلسة */
+    z-index: 1000; /* لضمان ظهور الناف بار فوق المحتوى */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* إضافة ظل */
+}
+/*home_start */
+.landing {
+    display: flex;
+    align-items: center;
+    padding-top: 200px;
+    color: white; /* لون النص */
+    display: flex;
+    justify-content: center;
+   margin: auto;
   
-    <!-- home-start -->
-    <div class="landing container" id="الرئيسية">
-        <div class="text-center"></div>
-        <img src="img/470227740_1703535227162820_7004743553175958169_n.png" alt="" width="880px">
-    </div>
-    <!-- home-end -->
+   
+    
+}
+.main-title h2{
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--matisse);
+}
+.main-title::after{
+    content: '';
+    width: 300px;
+    height: 3px;
+    background-color: var(--matisse);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    
+}
+/* home_end */
+
+/* products_start */
+.row{
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.main-title h2 {
+    color: var(--matisse);
+}
+.featured-products .container{
+    transform: scale(0.8); 
+
+}
+
+.mySwiper{
+   position: relative;
+    background-color: var(--background-color);
+    overflow: hidden;
+
+}
+.product{
+    
+    position: relative;
+    background-color: rgba(214, 222, 228, 0.5);
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 5px 5px 5px  #85424228;
+   margin-top: 50px;
+    padding: 5px 5px;
+    
+}
+.product .img-product{
+    position: relative ;
+    
+   
+}
+.product .img-product img{
+    width: 70%;
+    transition: 0.3s ease-in-out;
+}
+.product:hover .img-product img{
+    scale: 1.1;
+    cursor: pointer;
+}
+.product h3{
+    cursor: pointer;
+    color: var(--matisse);
+}
 
 
-    <section class="featured-products text-center pt-5 pb-5" id="منتجاتنا">
-        <div class="container">
-            <div class="sale-sec mySwiper">
-                
-                    <div class="main-title mb-5">
-                        <h2>أهم المنتجات</h2>
-                    </div>
 
-                    <div class="products swiper-wrapper">
-                        <div class="product swiper-slide">
-                            <div class="img-product">
-                                <img src="img/لوجو (1).png" alt="">
-                                
-                            </div>
-                            <h3 class="name-product">انارة داخلية</h3>
-                        </div>
-                        <div class="product swiper-slide">
-                            <div class="img-product">
-                                <img src="img/لوجو (1).png" alt="">
-                            </div>
-                            <h3 class="name-product">انارة خارجية</h3>
-                        </div>
-                        <div class="product swiper-slide">
-                            <div class="img-product">
-                                <img src="img/لوجو.png" alt="">
-                                
-                            </div>
-                            <h3 class="name-product">فيش ومفاتيح</h3>
-                        </div>
-                        <div class="product swiper-slide">
-                            <div class="img-product">
-                                <img src="img/لوجو (1).png" alt="">
-                               
-                            </div>
-                            <h3 class="name-product">مراوح</h3>
-                        </div>
-                        <div class="product swiper-slide">
-                            <div class="img-product">
-                                <img src="img/لوجو (1).png" alt="">
-                               
-                            </div>
-                            <h3 class="name-product">تكيفات</h3>
-                        </div>
-                        <div class="product swiper-slide">
-                            <div class="img-product">
-                                <img src="img/لوجو (1).png" alt="">
-                               
-                            </div>
-                            <h3 class="name-product">انارة داخلية</h3>
-                        </div>
-                        <div class="product swiper-slide">
-                            <div class="img-product">
-                                <img src="img/لوجو (1).png" alt="">
-                                
-                            </div>
-                            <h3 class="name-product"> تأسيس كهرباء</h3>
-                        </div>
-                        <div class="product swiper-slide">
-                            <div class="img-product">
-                                <img src="img/لوجو.png" alt="">
-                        
-                            </div>
-                            <h3 class="name-product">سباكة</h3>
-                        </div>
-                       
-                    </div>
 
-            </div>
 
-               
-            
-                
-        </div>
-       
-    </section>
-    <!-- product-end -->
+/* products_end */
 
-    <!-- partner-companies -->
-    <div class="partner-companies text-center pt-5 pb-5" id="الشركات-التي-نتعامل-معها">
-      <div class="container">
-          <div class="main-title mb-5">
-              <h2>بعض الشركات لدينا</h2>
-          </div>
-          <div class="row">
-              <div class="col-md-4">
-                  <div class="partner-card">
-                      <img src="path/to/company1-logo.png" alt=" شركة 1" class="partner-logo">
-                      <h5 class="partner-name">شركة 1</h5>
-                  </div>
-              </div>
-              <div class="col-md-4">
-                  <div class="partner-card">
-                      <img src="path/to/company2-logo.png" alt="شركة 2" class="partner-logo">
-                      <h5 class="partner-name">شركة 2</h5>
-                  </div>
-              </div>
-              <div class="col-md-4">
-                  <div class="partner-card">
-                      <img src="path/to/company3-logo.png" alt="شركة 3" class="partner-logo">
-                      <h5 class="partner-name">شركة 3</h5>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-  <!-- partner-companies-end -->
 
-  <!-- testimonials-start -->
-    <div class="testimonials text-center pt-5 pb-5" id="اراءالعملاء">
-      <div class="container">
-          <div class="main-title mb-5">
-              <h2>آراء العملاء</h2>
-          </div>
-          <div class="row">
-              <div class="col-md-4">
-                  <div class="testimonial-card">
-                      <p class="testimonial-text">"خدمة ممتازة! أنا سعيد جدًا بالمنتجات التي اشتريتها."</p>
-                      <h5 class="customer-name">أحمد محمد</h5>
-                  </div>
-              </div>
-              <div class="col-md-4">
-                  <div class="testimonial-card">
-                      <p class="testimonial-text">"تجربة تسوق رائعة، سأعود بالتأكيد مرة أخرى!"</p>
-                      <h5 class="customer-name">سارة علي</h5>
-                  </div>
-              </div>
-              <div class="col-md-4">
-                  <div class="testimonial-card">
-                      <p class="testimonial-text">"منتجات ذات جودة عالية، أنصح الجميع بالتجربة."</p>
-                      <h5 class="customer-name">محمد سعيد</h5>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-  <!-- testimonials-end -->
+/* partner-companies */
 
-  <!-- footer-start  -->
-    <footer class="footer text-center">
-      <div class="container">
-          <div class="social-links">
-              <a href="https://www.facebook.com/yourpage" target="_blank" class="social-icon">
-                  <i class="fa-brands fa-facebook"></i>
-              </a>
-              <a href="https://wa.me/yourwhatsapplink" target="_blank" class="social-icon">
-                  <i class="fa-brands fa-whatsapp"></i>
-              </a>
-              <a href="https://www.google.com/maps/place/yourlocation" target="_blank" class="social-icon">
-                  <i class="fa-solid fa-map-marker-alt"></i>
-              </a>
-          </div>
-          <p class="footer-text">©2024 جميع الحقوق محفوظة. صباح التجارية الغربية .</p>
-      </div>
-  </footer>
-  <!-- footer-end -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/all.min.js"></script>
-    <script src="main.js"></script>
+.partner-companies {
+    margin-top: -20px;
+    background-color: #f8f9fa; /* لون خلفية القسم */
+     transform: scale(0.8); /* تم تعديل القيمة هنا لتصغير المنتجات بنسبة 20% */
+}
 
-</body>
-</html>
+.main-title h2 {
+    color: var(--matisse);
+    animation-name: square;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-iteration-count: 5;
+}
+.partner-companies .main-title::after{
+    content: '';
+    width: 300px;
+    height: 3px;
+    background-color: var(--matisse);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    
+}
+
+.partner-card {
+    background-color: #ffffff; /* لون خلفية البطاقة */
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.partner-card:hover {
+    transform: translateY(-5px); /* تأثير التحويم */
+}
+
+.partner-logo {
+    width: 100%; /* عرض الشعار */
+    height: auto; /* الحفاظ على نسبة العرض إلى الارتفاع */
+    border-radius: 8px; /* زوايا دائرية للشعار */
+}
+
+.partner-name {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* partner-companies-end */
+
+/* testimonials-start */
+.testimonials {
+    transform: scale(0.8); /* تم تعديل القيمة هنا لتصغير المنتجات بنسبة 20% */
+     margin-top: -60px;
+    background-color: #f8f9fa; /* لون خلفية القسم */
+}
+
+.main-title h2 {
+    color: var(--matisse); 
+}
+
+.testimonial-card {
+    background-color: #ffffff; /* لون خلفية البطاقة */
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px); /* تأثير التحويم */
+}
+
+.testimonial-text {
+    font-style: italic;
+    color: var(--text-color);
+}
+
+.customer-name {
+    margin-top: 15px;
+    font-weight: bold;
+    color: var(--link-color);
+}
+/* testimonials-end */
+
+/* footer-start */
+
+.footer {
+    transform: scale(0.8); /* تم تعديل القيمة هنا لتصغير المنتجات بنسبة 20% */
+
+    background-color: var(--background-color);
+    padding: 20px 0;
+    color: var(--text-color);
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer .social-links {
+    margin-bottom: 10px;
+}
+
+.footer .social-icon {
+    color: var(--link-color);
+    font-size: 24px;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+
+.footer .social-icon:hover {
+    color: var(--heading-color);
+}
+
+.footer-text {
+    font-size: 14px;
+    color: var(--secondary-text-color);
+}
+/* footer-end */
+
+
+.prim-logo{
+    
+    animation-name: square;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-iteration-count: 5;
+}
+/* @keyframes square {
+    from{
+        opacity: 0;
+        scale: 0.8;
+
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+    
+} */
+
+
+@media  (max-width: 768px) {
+    .featured-products .container{
+
+        transform: scale(1.5); /* تم تعديل القيمة هنا لتصغير المنتجات بنسبة 20% */
+
+
+    }
+    .product {
+        aspect-ratio: 1; /* اجعل نسبة العرض إلى الارتفاع 1:1 (مربع) */
+        padding: 10px; /* زيادة الحشو داخل المنتج */
+        margin: 10px 0; /* تقليل المسافة بين المنتجات */
+    }
+    .products h3{
+        text-align: center;
+        font-size: 15px;
+        white-space: nowrap; 
+        text-overflow: ellipsis; 
+    }
+    .sale-sec .main-title h2{
+        transform: scale(.6);
         
-  
+    }
+    .sale-sec .main-title::after{
+      height: 1.8px;
+      width: 100px;
+     
+    }
+    
+}
